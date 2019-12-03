@@ -31,12 +31,12 @@
     <link href="../../css/themes/all-themes.css" rel="stylesheet" />
 </head>
 
-<body class="theme-red">
+<body class="theme-black">
     <!-- Page Loader -->
     <div class="page-loader-wrapper">
         <div class="loader">
             <div class="preloader">
-                <div class="spinner-layer pl-red">
+                <div class="spinner-layer pl-black">
                     <div class="circle-clipper left">
                         <div class="circle"></div>
                     </div>
@@ -69,7 +69,7 @@
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="../../index.html">BIBLIOTECA CENTRAL</a>
+                <a class="navbar-brand" href="../../index.html">Ammu - Nation</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -97,10 +97,10 @@
                     <img src="../../images/user.png" width="48" height="48" alt="User" />
                 </div>
                 <div class="info-container">
-                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
-                    <div class="email">john.doe@example.com</div>
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Andrei Ramos</div>
+                    <div class="email" >andreiramos@example.com</div>
                     <div class="btn-group user-helper-dropdown">
-                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">my_location</i>
                         <ul class="dropdown-menu pull-right">
                             <li><a href="javascript:void(0);"><i class="material-icons">person</i>Perfil</a></li>
                             <li role="separator" class="divider"></li>
@@ -113,91 +113,63 @@
             <!-- Menu -->
             <div class="menu">
                 <ul class="list">
-                    <li class="header">NAVEGAÇÃO</li>
-                    <li>
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">bookmarks</i>
-                            <span>Genero</span>
-                        </a>
-                        <ul class="ml-menu">
-                            <li>
-                                <a href="/genero/add">Adicionar</a>
-                            </li>
-                            <li>
-                                <a href="/genero">Listar</a>
-                            </li>                            
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">print</i>
-                            <span>Editora</span>
-                        </a>
-                        <ul class="ml-menu">
-                            <li>
-                                <a href="/editora/add">Adicionar</a>
-                            </li>
-                            <li>
-                                <a href="/editora">Listar</a>
-                            </li>                            
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">edit</i>
-                            <span>Autor</span>
-                        </a>
-                        <ul class="ml-menu">
-                            <li>
-                                <a href="/autor/add">Adicionar</a>
-                            </li>
-                            <li>
-                                <a href="/autor">Listar</a>
-                            </li>                            
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">book</i>
-                            <span>Livro</span>
-                        </a>
-                        <ul class="ml-menu">
-                            <li>
-                                <a href="/livro/add">Adicionar</a>
-                            </li>
-                            <li>
-                                <a href="/livro">Listar</a>
-                            </li>                            
-                        </ul>
-                    </li>
+                    <li class="header">Menu</li>
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">perm_identity</i>
-                            <span>Usuário</span>
+                            <span>Cliente</span>
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="/usuario/add">Adicionar</a>
+                                <a href="/cliente/add">Adicionar</a>
                             </li>
                             <li>
-                                <a href="/usuario">Listar</a>
+                                <a href="/cliente">Listar</a>
                             </li>                            
                         </ul>
                     </li>
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">cached</i>
-                            <span>Emprestimo</span>
+                            <i class="material-icons">store</i>
+                            <span>Filial</span>
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="">Adicionar</a>
+                                <a href="/loja/add">Adicionar</a>
                             </li>
                             <li>
-                                <a href="">Listar</a>
+                                <a href="/loja">Listar</a>
                             </li>                            
                         </ul>
-                    </li>                    
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">supervisor_account</i>
+                            <span>Funcionarios</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="/funcionarios/add">Adicionar</a>
+                            </li>
+                            <li>
+                                <a href="/funcionarios">Listar</a>
+                            </li>                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">my_location</i>
+                            <span>Arma</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="/arma/add">Adicionar</a>
+                            </li>
+                            <li>
+                                <a href="/arma">Listar</a>
+                            </li>                            
+                        </ul>
+                    </li>               
                 </ul>
             </div>
             <!-- #Menu -->
@@ -222,9 +194,9 @@
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active in active" id="skins">
                     <ul class="demo-choose-skin">
-                        <li data-theme="red" class="active">
-                            <div class="red"></div>
-                            <span>Red</span>
+                        <li data-theme="black" class="active">
+                            <div class="black"></div>
+                            <span>black</span>
                         </li>
                         <li data-theme="pink">
                             <div class="pink"></div>

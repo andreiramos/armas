@@ -1,0 +1,144 @@
+<%- include('../cabecalho') -%>
+<section class="content">
+    <div class="container-fluid">
+        <div class="block-header">
+            <h2>ARMA</h2>
+        </div>
+        <!-- Horizontal Layout -->
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>
+                            EDITAR ARMA
+                        </h2>
+                    </div>
+                    <div class="body">
+                        <form class="form-horizontal" method="POST" enctype="multipart/form-data">
+                            <div class="row clearfix">
+                                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                        <label for="nome">ID</label>
+                                    </div>
+                                    <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="text" readonly name="id" id="id" class="form-control" placeholder="Id da loja" value="<%=arma._id%>" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label for="titulo">Nome</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" name="titulo" id="titulo" class="form-control"
+                                                placeholder="Nome da arma" value="<%=arma.titulo%>">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label for="isbn">Data de Fabricação</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" name="isbn" id="isbn" class="form-control"
+                                                placeholder="Data de Fabricação" value="<%=arma.isbn%>">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label for="sinopse">Numeração</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <textarea name="sinopse" id="sinopse" class="form-control"
+                                                placeholder="Numeração"><%=arma.sinopse%></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label for="foto">Foto da Arma</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="file" required name="foto" id="foto" class="form-control"
+                                                placeholder="Foto do Loja">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label for="cliente">Cliente</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <select name="cliente">
+                                                <% Clientes.forEach(function(cliente){ %>
+                                                    <option <%=arma.cliente._id.toString() == cliente._id.toString()?"selected":""  %> value="<%=cliente._id%>"><%=cliente.nome%></option>
+                                                <%});%>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label for="loja">Filial</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <select name="loja">
+                                                <% Lojas.forEach(function(loja){ %>
+                                                    <option <%=arma.loja._id.toString() == loja._id.toString()?"selected":""  %> value="<%=loja._id%>"><%=loja.nome%></option>
+                                                <%});%>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label for="armaes">Funcionarios que esta Cadastrando</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <select name="funcionarios" multiple>
+                                                <% Funcionarios.forEach(function(funcionario){ %>
+                                                    <option <%=arma.funcionarios.toString().indexOf(funcionario._id.toString())!=-1?"selected":""%> value="<%=funcionario._id%>"><%=funcionario.nome%></option>
+                                                <%});%>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
+                                    <button type="clear" class="btn btn-primary m-t-15 waves-effect">Limpar</button>
+                                    <button type="submit" class="btn btn-primary m-t-15 waves-effect">Cadastrar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #END# Horizontal Layout -->
+    </div>
+</section>
+<%- include('../rodape') -%>
